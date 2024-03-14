@@ -11,3 +11,10 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ### Installed python lsp
 
 npm i -g pyright
+
+### Installed tmux
+
+Use josean's configuration
+
+https://www.youtube.com/watch?v=U-omALWIBos
+https://github.com/josean-dev/dev-environment-files

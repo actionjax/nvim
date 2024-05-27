@@ -14,3 +14,7 @@ vim.g.clipboard = {
   },
   cache_enabled = 0,
 }
+local space = '.'
+vim.opt.listchars:append({ tab = '| ', trail = space, nbsp = space })
+vim.opt.inccommand = 'split'
+vim.opt.cursorline = true

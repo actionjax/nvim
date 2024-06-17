@@ -25,7 +25,15 @@ sudo curl -L https://github.com/mrjosh/helm-ls/releases/download/master/helm_ls_
 sudo chmod +x /usr/local/bin/helm_ls
 sudo npm install -g yaml-language-server
 
-### Tmux config
+### Tmux
+
+#### Install tpm
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+#### Configuration
 
 ~/.tmux.conf
 ```

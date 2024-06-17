@@ -44,11 +44,12 @@ set -g prefix C-a
 unbind C-b
 bind-key C-a send-prefix
 
+# new windows are the same as previous path
+bind c new-window -c "#{pane_current_path}"
 unbind %
-bind | split-window -h
-
+bind | split-window -h -c "#{pane_current_path}"
 unbind '"'
-bind - split-window -v
+bind - split-window -v -c "#{pane_current_path}"
 
 bind 'v' copy-mode
 

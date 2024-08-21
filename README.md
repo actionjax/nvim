@@ -39,6 +39,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",*256col*:Tc"
+set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
+set-environment -g COLORTERM "truecolor"
 
 set -g prefix C-a
 unbind C-b

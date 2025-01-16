@@ -59,6 +59,11 @@ bind 'v' copy-mode
 unbind r
 bind r source-file ~/.tmux.conf
 
+bind -r j select-pane -D
+bind -r k select-pane -U
+bind -r l select-pane -R
+bind -r h select-pane -L
+
 bind -r j resize-pane -D 5
 bind -r k resize-pane -U 5
 bind -r l resize-pane -R 5
@@ -82,7 +87,7 @@ set -sg escape-time 10
 set -g @plugin 'tmux-plugins/tpm'
 
 # list of tmux plugins
-set -g @plugin 'christoomey/vim-tmux-navigator'
+#set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'jimeh/tmux-themepack'
 set -g @plugin 'tmux-plugins/tmux-resurrect' # persist tmux sessions after computer restart
 set -g @plugin 'tmux-plugins/tmux-continuum' # automatically saves sessions for you every 15 minutes
@@ -94,4 +99,28 @@ set -g @continuum-restore 'on'
 
 # initialize tmux plugin manager (keep this at bottom)
 run '~/.tmux/plugins/tpm/tpm'
+```
+
+### Zsh configuration
+
+* Use powerlevel10k
+* Use zsh-autosuggestions
+* Use zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+In your `.zshrc`
+
+```bash
+plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+bindkey ^J autosuggest-accept
 ```

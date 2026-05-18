@@ -121,13 +121,12 @@ plugins=(
 
 source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+bindkey ^J autosuggest-accept
 ```
 
 ### Export
 
 ```bash
 tar czf /data/nvim.tar.gz .local/share/nvim .local/state/nvim .config/nvim
-```
-
-bindkey ^J autosuggest-accept
 ```
